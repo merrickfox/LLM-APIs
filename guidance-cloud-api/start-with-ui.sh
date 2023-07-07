@@ -4,6 +4,8 @@ echo "Pod started"
 SCRIPTDIR=/root/scripts
 VOLUME=/workspace
 
+mkdir -p $VOLUME/logs
+
 if [[ ! -f /.built.llama-cpp-python ]]; then
 	"$SCRIPTDIR"/build-llama-cpp-python.sh >>$VOLUME/logs/build-llama-cpp-python.log 2>&1 &
 fi
