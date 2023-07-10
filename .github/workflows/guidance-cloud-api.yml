@@ -22,7 +22,7 @@ jobs:
                 with:
                     images: ${{ secrets.DOCKERHUB_USERNAME }}/guidance-cloud-api
                     tags: |
-                        type=raw,value={{date 'YYYYMMDD'}}
+                        type=sha
             -
                 name: Set up Docker Buildx
                 uses: docker/setup-buildx-action@v2
