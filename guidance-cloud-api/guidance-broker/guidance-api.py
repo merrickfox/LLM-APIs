@@ -49,7 +49,7 @@ guidance.llm = guidance.llms.TGWUI(guidance_url)
 app = Flask(__name__)
 
 @app.route('/guidance-api', methods=['POST'])
-def guidance():
+def do_guidance_call():
     data = request.get_json()
 
     args = data.get('args', {})
