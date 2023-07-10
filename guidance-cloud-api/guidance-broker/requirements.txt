@@ -1,2 +1,3 @@
 Flask==2.3.2
+requests
 git+https://github.com/merrickfox/guidance.git#egg=guidance
