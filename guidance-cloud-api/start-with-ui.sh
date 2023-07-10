@@ -21,6 +21,10 @@ fi
 
 "$SCRIPTDIR"/textgen-on-workspace.sh
 
+# Run guidance broker server
+cd /workspace/guidance-broker
+python3 guidance.py >>$VOLUME/logs/guidance-broker.log 2>&1 &
+
 if [[ $MODEL ]]; then
 	"$SCRIPTDIR"/fetch-model.py "$MODEL" $VOLUME/text-generation-webui/models >>$VOLUME/logs/fetch-model.log 2>&1
 fi

@@ -1,1 +1,15 @@
 .idea
+**/venv/
+**/.DS_Store
+**/.idea/
+**/.vscode/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.pytype/
+**/.pylintrc
+**/.mypy.ini
+**/.gitignore
+**/.git/
+**/.coverage
+**/.tox/
+**/.nox/
