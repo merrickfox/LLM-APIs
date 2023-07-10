@@ -17,4 +17,3 @@ fi
 
 # Then link /root/text-generation-webui folder to /workspace so it's available in that familiar location as well
 ln -s /workspace/text-generation-webui /root/text-generation-webui
-ln -s /workspace/guidance-broker /root/guidance-broker
