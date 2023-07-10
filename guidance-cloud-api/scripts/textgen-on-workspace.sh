@@ -4,8 +4,7 @@
 mkdir -p /workspace
 
 rm -rf /workspace/guidance-broker
-mv /root/guidance-broker /workspace
-
+cp -R /root/guidance-broker /workspace/
 
 if [[ ! -d /workspace/text-generation-webui ]]; then
 	# If we don't already have /workspace/text-generation-webui, move it there
