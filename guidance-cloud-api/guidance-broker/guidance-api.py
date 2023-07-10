@@ -53,14 +53,18 @@ def do_guidance_call():
     data = request.get_json()
 
     args = data.get('args', {})
+    res_fields = data.get('res_fields', [])
     payload = data.get('payload', "")
 
     execute_prompt = guidance(payload)
 
     res = execute_prompt(**args)
 
-    # use args and payload as needed
-    return jsonify({"data": res})
+    print(res)
+
+    res_dict = {field: getattr(res, field, None) for field in res_fields}
+
+    return jsonify({"data": res_dict})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8181)
