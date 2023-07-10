@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import guidance
+import os
 
 port_number = os.getenv('TG_GUIDANCE_PORT_NUMBER', '9000')
 guidance.llm = guidance.llms.TGWUI(f"http://127.0.0.1:{port_number}")
