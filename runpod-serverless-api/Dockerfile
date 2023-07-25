@@ -5,7 +5,7 @@ RUN git config --global credential.helper store && \
 
 
 COPY scripts /root/scripts
-RUN git clone https://huggingface.co/TheBloke/chronos-hermes-13B-GPTQ /root/text-generation-webui/models
+RUN git clone https://huggingface.co/TheBloke/chronos-hermes-13B-GPTQ /root/text-generation-webui/models/chronos-hermes-13B-GPTQ
 
 COPY --chmod=755 start-with-ui.sh /start.sh
 
